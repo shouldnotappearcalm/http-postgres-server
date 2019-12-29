@@ -26,7 +26,7 @@ module.exports = function(tableHtml, port) {
 
   <h3>Jquery 示例</h3>
   <pre>
-    $.post('http://127.0.0.1:${port}/api/query', {sql: 'show tables'}, function(res){
+    $.post('http://127.0.0.1:${port}/api/query', {sql: 'SELECT schemaname,tablename FROM pg_tables'}, function(res){
       console.log(res)
     })
   </pre>

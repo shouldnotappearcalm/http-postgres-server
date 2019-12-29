@@ -24,9 +24,9 @@ npm link
 mysql的用户名、密码、数据库名、数据库的地址、端口、http服务的端口 ，下面罗列的均为默认值，可以不填
 
 ```bash
-http-mysql-server --user sa --password 123456 --host 127.0.0.1  --database db_user --port 3306 --http_port 5555
+http-postgres-server --user sa --password 123456 --host 127.0.0.1  --database postgres --port 5432 --http_port 5555
 #如只指定 数据库端口 其他均用默认值
-http-mysql-server  --port 3306
+http-postgres-server  --port 5432
 ```
 
 ## 使用方法
@@ -41,4 +41,6 @@ http-mysql-server  --port 3306
 
 ## 示例
 
-![](https://ws1.sinaimg.cn/large/006tCP9Lly1frk4kc305cj31ne0vuaec.jpg)
+请执行正确的 sql，这里我的 schema 是 db_test，同时我的表名也叫做 db_test，请替换伟你的 schema 和 表名
+
+![image](https://user-images.githubusercontent.com/20592210/71551914-456e3700-2a2c-11ea-8ac7-6f45b3d3fa80.png)

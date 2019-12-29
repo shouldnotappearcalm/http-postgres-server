@@ -8,7 +8,6 @@ module.exports = function(options) {
         pool.query(sql, function(error, results) {
           if (error) reject(error);
           let rows = results.rows;
-          console.log(rows);
           resolve({
             rows
           });
@@ -28,10 +27,10 @@ module.exports = function(options) {
 
   config = {
     host: options.host || 'localhost',
-    port: options.port || 3306,
+    port: options.port || 5432,
     user: options.user || 'sa',
-    database: options.database || 'test',
-    password: (options.password + '') || 'root'
+    database: options.database || 'postgres',
+    password: (options.password + '') || '123456'
   }
 
   const port = options.http_port || "5555";
@@ -76,8 +75,6 @@ module.exports = function(options) {
     }
 
     let tableHtml = [];
-    console.log("-----------------------------------------------------")
-    console.log(result);
     result.rows.forEach((item, index) =>
       tableHtml.push(
         "<tr><td> " + (index + 1) + " </td><td>" + item.schemaname + '.' + item.tablename + "</td></tr>"
